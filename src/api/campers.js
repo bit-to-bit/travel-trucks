@@ -1,10 +1,13 @@
 import axios from 'axios';
+import { apiBaseURL } from '../constants';
 
-axios.defaults.baseURL = 'https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers';
+axios.defaults.baseURL = apiBaseURL;
 
 export const fetchCampersList = async () => {
   const { data } = await axios.get('/');
-  return data.results;
+
+  console.dir(data.items);
+  return data.items;
 };
 
 export const fetchCamper = async id => {

@@ -1,0 +1,22 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #dadde1;
+    border-radius: 20px;
+    padding: 24px;
+    width: 888px;
+    height: 368px;
+}
+
+.photo {
+    display: flexbox;
+    height: 320px;
+    width: 292px;
+    overflow: hidden;
+}
+
+.photo img {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+}

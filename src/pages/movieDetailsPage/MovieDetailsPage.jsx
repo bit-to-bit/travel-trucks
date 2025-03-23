@@ -1,20 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchMovie } from '../../api/movies';
 import css from './MovieDetailsPage.module.css';
 
 const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await fetchMovie(movieId);
-      setMovie(res);
-    };
-    console.log('dodo');
-    fetchData();
-  }, [movieId]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await fetchMovie(movieId);
+  //     setMovie(res);
+  //   };
+  //   console.log('dodo');
+  //   fetchData();
+  // }, [movieId]);
 
   console.log('movie', movie);
   return (

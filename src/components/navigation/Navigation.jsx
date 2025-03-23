@@ -15,8 +15,8 @@ const Navigation = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className={getActiveLink} to='/movies'>
-            Movies
+          <NavLink className={getActiveLink} to='/catalog'>
+            Catalog
           </NavLink>
         </li>
       </ul>
