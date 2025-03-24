@@ -13,13 +13,10 @@ export const fetchCampersList = async () => {
 
 export const fetchCamper = async id => {
   const { data } = await axios.get(`/${id}`);
-
-  console.dir(data);
   return data;
 };
 
 export const fetchCampers = createAsyncThunk('campers/fetchAll', async () => {
   const { data } = await axios.get('/');
-  console.log(data.items);
   return data.items;
 });
