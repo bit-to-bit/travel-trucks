@@ -1,11 +1,10 @@
-import { contactsInitialState } from './constants';
+import { filterVehicleEquipment } from './constants';
 
-const getContactInitialState = () => {
-  const localData = localStorage.getItem('contacts');
-  if (localData) {
-    return JSON.parse(localData);
-  }
-  return contactsInitialState;
+export const getCamperProperties = camper => {
+  const res = filterVehicleEquipment
+    .filter(el => el.trueValue === camper[el.key])
+    .map(el => el.name);
+  return res;
 };
 
-export default getContactInitialState;
+export const cropText = text => text.substr(0, 68) + '...';

@@ -1,13 +1,14 @@
 import css from './FilterPanel.module.css';
-const Filter = () => {
+import FilterLocation from '../filterLocation/FilterLocation';
+
+const FilterPanel = () => {
   return (
     <div className={css.filter}>
-      <div>Location</div>
-      <div>Filters</div>
-
-      
+      <h4>Location</h4>
+      <FilterLocation />
+      <h4>Filters</h4>
     </div>
   );
 };
 
-export default Filter;
+export default FilterPanel;
